@@ -10,6 +10,7 @@ from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 import vlc
 import requests
+from playsound import playsound
 
 # Create your views here.
 class IndexView(CreateView):
