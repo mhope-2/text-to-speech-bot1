@@ -25,7 +25,7 @@ SECRET_KEY = ')1qvdiywwk7(g2mz(z_5j%0v#b&*ksd56xin+w=huctn6wxu)('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ttsbot.herokuapp.com']
+ALLOWED_HOSTS = ['text-to-speech-bot1.herokuapp.com']
 
 
 # Application definition
