@@ -23,6 +23,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" /> 
 <!--===============================================================================================-->
 </head>
+{% block body_block %}
+
 <body>
 	
 	<div class="limiter" >
@@ -31,12 +33,15 @@
 				<div class="login100-pic js-tilt" data-tilt>
                     <img src="{% static 'images/img-01.png' %}" height="150px" alt="IMG"> 
 				</div>
+                
 
 				<form class="login100-form validate-form" method="POST" style="margin-bottom: 150px; margin-right: 100px;">
-					<span class="login100-form-title">
-						Enter your URL
+					
+                    <span class="login100-form-title" style="font-weight: bold;">
+                        <p style="color: black;">Welcome to Speech to Text Services</p>
+                        <!-- <p style="color: black;">Enter URL</p> -->
 					</span>
-
+                    
 					<div class="wrap-input100">
 						{% csrf_token %}
                         {{ form | crispy }}
@@ -83,4 +88,5 @@
     <script src="{% static 'js/main.js' %}"></script> 
 
 </body>
+{% endblock body_block %}
 </html>

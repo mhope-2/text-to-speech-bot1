@@ -44,8 +44,22 @@ class IndexView(CreateView):
                 language = 'en'
                 speech = gTTS(text = soup.text, lang=language, slow=False)
                 speech.save("text.mp3")
-                to_speech = vlc.MediaPlayer("text.mp3")
-                to_speech.play()
+                # to_speech = vlc.MediaPlayer("text.mp3")
+                # to_speech.play()
+
+                # creating Instance class object 
+                player = vlc.Instance() 
+
+                # creating a new media 
+                media = player.media_new("text.mp3") 
+
+                # creating a media player object 
+                media_player = player.media_player_new() 
+
+                media_player.set_media(media)
+
+                # start playing video 
+                media_player.play() 
 
             return HttpResponseRedirect(url)
 
