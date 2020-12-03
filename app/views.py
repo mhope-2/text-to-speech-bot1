@@ -48,9 +48,7 @@ class IndexView(CreateView):
                 # to_speech = vlc.MediaPlayer("text.mp3")
                 # to_speech.play()
 
-                pygame.mixer.init()
-                pygame.mixer.music.load("text.mp3")
-                pygame.mixer.music.play()
+                os.popen("afplay text.mp3")
 
             return HttpResponseRedirect(url)
 
