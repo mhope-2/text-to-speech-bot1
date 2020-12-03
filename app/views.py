@@ -10,7 +10,8 @@ from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 import vlc
 import requests
-from playsound import playsound
+import pygame
+
 
 # Create your views here.
 class IndexView(CreateView):
@@ -47,19 +48,9 @@ class IndexView(CreateView):
                 # to_speech = vlc.MediaPlayer("text.mp3")
                 # to_speech.play()
 
-                # creating Instance class object 
-                player = vlc.Instance() 
-
-                # creating a new media 
-                media = player.media_new("text.mp3") 
-
-                # creating a media player object 
-                media_player = player.media_player_new() 
-
-                media_player.set_media(media)
-
-                # start playing video 
-                media_player.play() 
+                pygame.mixer.init()
+                pygame.mixer.music.load("text.mp3")
+                pygame.mixer.music.play()
 
             return HttpResponseRedirect(url)
 

@@ -11,6 +11,7 @@ html5lib==1.1
 idna==2.10
 mp3play==0.1.15
 playsound==1.2.2
+pygame==2.0.0
 python-vlc==3.0.11115
 pytz==2020.4
 requests==2.25.0
