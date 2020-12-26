@@ -11,6 +11,7 @@ from bs4 import BeautifulSoup
 import vlc
 import requests
 import pygame
+from playsound import playsound
 
 
 # Create your views here.
@@ -45,10 +46,11 @@ class IndexView(CreateView):
                 language = 'en'
                 speech = gTTS(text = soup.text, lang=language, slow=False)
                 speech.save("text.mp3")
+                playsound("text.mp3")
                 # to_speech = vlc.MediaPlayer("text.mp3")
                 # to_speech.play()
 
-                os.popen("afplay text.mp3")
+                # os.popen("afplay text.mp3")
 
             return HttpResponseRedirect(url)
 
