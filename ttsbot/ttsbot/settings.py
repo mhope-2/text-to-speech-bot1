@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+# import django_on_heroku
+
+# Activate Django-Heroku.
+# django_on_heroku.settings(locals())
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -133,25 +137,25 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-# # Extra lookup directories for collectstatic to find static files
 # STATICFILES_DIRS = (
 #     os.path.join(BASE_DIR, 'static'),
 # )
 
-#  Add configuration for static files storage using whitenoise
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
-# STATICFILES_DIRS = (
-#   os.path.join(SITE_ROOT, 'static/'),
-# )
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
