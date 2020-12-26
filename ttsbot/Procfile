@@ -1,1 +1,1 @@
-web: gunicorn ttsbot.wsgi:application
+web: gunicorn ttsbot.ttsbot.wsgi:application
