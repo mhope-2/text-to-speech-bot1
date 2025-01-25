@@ -16,7 +16,7 @@ playsound==1.2.2
 psycopg2-binary==2.9.9
 pygame==2.6.0
 python-vlc==3.0.20123
-pytz==2020.4
+pytz==2024.2
 requests==2.32.3
 six==1.16.0
 soupsieve==2.6
