@@ -14,7 +14,7 @@ idna==3.7
 mp3play==0.1.15
 playsound==1.2.2
 psycopg2-binary==2.9.9
-pygame==2.6.0
+pygame==2.6.1
 python-vlc==3.0.20123
 pytz==2025.1
 requests==2.32.3
