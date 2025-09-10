@@ -18,7 +18,7 @@ pygame==2.6.0
 python-vlc==3.0.20123
 pytz==2025.1
 requests==2.32.3
-six==1.16.0
+six==1.17.0
 soupsieve==2.6
 sqlparse==0.5.1
 urllib3==2.2.2
