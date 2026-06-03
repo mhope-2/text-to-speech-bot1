@@ -10,7 +10,7 @@ django-on-heroku==1.1.2
 gTTS==2.5.3
 gunicorn==23.0.0
 html5lib==1.1
-idna==3.7
+idna==3.15
 mp3play==0.1.15
 playsound==1.2.2
 psycopg2-binary==2.9.9
