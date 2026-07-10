@@ -19,7 +19,7 @@ python-vlc==3.0.20123
 pytz==2020.4
 requests==2.34.2
 six==1.16.0
-soupsieve==2.6
+soupsieve==2.8.4
 sqlparse==0.5.4
 urllib3==2.7.0
 webencodings==0.5.1
