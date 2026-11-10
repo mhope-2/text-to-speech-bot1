@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 import vlc
 import requests
 import pygame
-from playsound import playsound
+from playsound3 import playsound
 
 
 # Create your views here.
